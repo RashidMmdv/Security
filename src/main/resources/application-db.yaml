@@ -1,0 +1,28 @@
+spring:
+  security:
+    jwt-secret-key: IGhlbGxvIE1yIG1rbWtta21rbWttIGhlbGxvIE1yIG1rbWtta21rbWttIGhlbGxvIE1yIG1rbWtta21rbWttIGhlbGxvIE1yIG1rbWtta21rbWttIGhlbGxvIE1yIG1rbWtta21rbWttIGhlbGxvIE1yIG1rbWtta21rbWttIGhlbGxvIA==
+
+#  data:
+#    redis:
+#      host: ${REDIS_HOST:localhost}
+#      port: ${REDIS_PORT:6381}
+
+
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/security?allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: password
+#    hikari:
+##      maximum-pool-size: 50
+##      minimum-idle: 3
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    open-in-view: true
+
+  liquibase:
+    enabled: false
+
